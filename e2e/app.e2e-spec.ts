@@ -1,14 +1,14 @@
-import { MyAppPage } from './app.po';
+import { CleanUiPage } from './app.po';
 
-describe('my-app App', () => {
-  let page: MyAppPage;
+describe('clean-ui App', () => {
+  let page: CleanUiPage;
 
   beforeEach(() => {
-    page = new MyAppPage();
+    page = new CleanUiPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
