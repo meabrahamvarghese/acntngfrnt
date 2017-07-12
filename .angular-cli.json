@@ -1,8 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "version": "1.0.0-beta.32.3",
-    "name": "clean-ui"
+    "name": "inventory"
   },
   "apps": [
     {
@@ -16,9 +15,11 @@
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
-      "tsconfig": "tsconfig.json",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "styles.css",
         "assets/preloader.css",
         "assets/vendors/by_bower/bootstrap/dist/css/bootstrap.min.css",
         "assets/vendors/by_bower/jscrollpane/style/jquery.jscrollpane.css",
@@ -40,20 +41,12 @@
         "assets/vendors/by_hands/font-linearicons/style.css",
         "assets/vendors/by_hands/font-icomoon/style.css",
         "assets/vendors/by_hands/font-awesome/css/font-awesome.min.css",
-        "assets/vendors/by_hands/cleanhtmlaudioplayer/src/player.css",
-        "assets/vendors/by_hands/cleanhtmlvideoplayer/src/player.css",
 
         "assets/modules/core/common/core.cleanui.css",
         "assets/modules/vendors/common/vendors.cleanui.css",
-        "assets/modules/layouts/common/layouts-pack.cleanui.css",
-        "assets/modules/themes/common/themes.cleanui.css",
         "assets/modules/menu-left/common/menu-left.cleanui.css",
         "assets/modules/menu-right/common/menu-right.cleanui.css",
-        "assets/modules/top-bar/common/top-bar.cleanui.css",
-        "assets/modules/footer/common/footer.cleanui.css",
-        "assets/modules/pages/common/pages.cleanui.css",
-        "assets/modules/ecommerce/common/ecommerce.cleanui.css",
-        "assets/modules/apps/common/apps.cleanui.css"
+        "assets/modules/ecommerce/common/ecommerce.cleanui.css"
       ],
       "scripts": [
         "assets/vendors/by_bower/jquery/dist/jquery.js",
@@ -73,10 +66,8 @@
         "assets/vendors/by_bower/bootstrap-show-password/bootstrap-show-password.min.js",
         "assets/vendors/by_bower/moment/min/moment.min.js",
         "assets/vendors/by_bower/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js",
-        "assets/vendors/by_bower/fullcalendar/dist/fullcalendar.min.js",
         "assets/vendors/by_bower/bootstrap-sweetalert/dist/sweetalert.min.js",
         "assets/vendors/by_bower/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js",
-        "assets/vendors/by_bower/summernote/dist/summernote.min.js",
         "assets/vendors/by_bower/owl.carousel/dist/owl.carousel.min.js",
         "assets/vendors/by_bower/ionrangeslider/js/ion.rangeSlider.min.js",
         "assets/vendors/by_bower/nestable/jquery.nestable.js",
@@ -112,12 +103,13 @@
   },
   "lint": [
     {
-      "files": "src/**/*.ts",
-      "project": "src/tsconfig.json"
+      "project": "src/tsconfig.app.json"
     },
     {
-      "files": "e2e/**/*.ts",
-      "project": "e2e/tsconfig.json"
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
     }
   ],
   "test": {

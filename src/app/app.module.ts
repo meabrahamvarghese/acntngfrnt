@@ -8,17 +8,17 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { TopBarComponent} from './components/top-bar/top-bar.component';
-import { MenuLeftComponent } from './components/menu-left/menu-left.component';
-import { MenuRightComponent } from './components/menu-right/menu-right.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { TopBarComponent} from './layout/top-bar/top-bar.component';
+import { MenuLeftComponent } from './layout/menu-left/menu-left.component';
+import { MenuRightComponent } from './layout/menu-right/menu-right.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
-import { StructureModule } from './structure/structure.module';
+import { PagesModule } from './pages/pages.module';
 
 declare var NProgress: any;
 
 @NgModule({
-    declarations: [
+  declarations: [
         AppComponent,
         TopBarComponent,
         MenuLeftComponent,
@@ -30,7 +30,7 @@ declare var NProgress: any;
         FormsModule,
         HttpModule,
         RouterModule,
-        StructureModule,
+        PagesModule,
         NgbModule.forRoot(),
         routing
     ],

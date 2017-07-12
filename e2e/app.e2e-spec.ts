@@ -1,14 +1,14 @@
-import { CleanUiPage } from './app.po';
+import { InventoryPage } from './app.po';
 
-describe('clean-ui App', () => {
-  let page: CleanUiPage;
+describe('inventory App', () => {
+  let page: InventoryPage;
 
   beforeEach(() => {
-    page = new CleanUiPage();
+    page = new InventoryPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
