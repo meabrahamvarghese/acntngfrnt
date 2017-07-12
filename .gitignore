@@ -8,6 +8,7 @@
 # dependencies
 /node_modules
 /src/assets/vendors/by_bower
+/package-lock.json
 
 # IDEs and editors
 /.idea
