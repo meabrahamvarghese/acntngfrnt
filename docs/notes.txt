@@ -1,0 +1,36 @@
+menu
+
+Dashboard
+
+Products
+ Product list
+ Product Categories
+ Brands
+
+Stocks
+ Stock list
+ Purchases
+ Stock Count
+
+Sales
+ orders
+ invoices
+ payments
+
+Users
+ Operators
+ previlages
+
+Reports
+
+Settings
+ general
+ warehouses
+ racks 
+
+Shops
+
+ 
+ 
+ 
+ 
