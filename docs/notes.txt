@@ -30,6 +30,17 @@ Settings
 
 Shops
 
+
+
+
+notes
+
+variants
+warehouse, racks
+quetation
+products, tax included
+
+
  
  
  

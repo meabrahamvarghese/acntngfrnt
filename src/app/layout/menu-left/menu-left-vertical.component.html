@@ -18,73 +18,155 @@
                 </a>
             </li>
             <li class="cat__menu-left__divider"><!-- --></li>
-            <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-home"></span>
-                    Products
-                </a>
-            </li>
-            <li class="cat__menu-left__divider"><!-- --></li>
-            <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-home"></span>
-                    Stocks
-                </a>
-            </li>
-            <li class="cat__menu-left__divider"><!-- --></li>
-            <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-home"></span>
-                    Sales
-                </a>
-            </li>
-            <li class="cat__menu-left__divider"><!-- --></li>
             <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a href="javascript: void(0);">
-                    <span class="cat__menu-left__icon icmn-download"></span>
+                <a [routerLink]="['dashboards/alpha']">
+                    <span class="cat__menu-left__icon icmn-home"></span>
                     Products
                 </a>
                 <ul class="cat__menu-left__list">
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
                         <a [routerLink]="['ecommerce/dashboard']">
                             <span class="cat__menu-left__icon">DB</span>
-                            Dashboard
+                            All Products
                         </a>
                     </li>
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/products-catalog']">
-                            <span class="cat__menu-left__icon">PC</span>
-                            Products Catalog
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Product Categories
                         </a>
                     </li>
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/product-details']">
-                            <span class="cat__menu-left__icon">PD</span>
-                            Product Details
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Brands
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a [routerLink]="['dashboards/alpha']">
+                    <span class="cat__menu-left__icon icmn-home"></span>
+                    Stocks
+                </a>
+                <ul class="cat__menu-left__list">
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Stock list
                         </a>
                     </li>
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/product-edit']">
-                            <span class="cat__menu-left__icon">PE</span>
-                            Product Edit
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Purchases
                         </a>
                     </li>
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/products-list']">
-                            <span class="cat__menu-left__icon">PL</span>
-                            Products List
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Stock Count
                         </a>
                     </li>
+                </ul>
+            </li>
+            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a [routerLink]="['dashboards/alpha']">
+                    <span class="cat__menu-left__icon icmn-home"></span>
+                    Sales
+                </a>
+                <ul class="cat__menu-left__list">
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/orders']">
-                            <span class="cat__menu-left__icon">O</span>
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
                             Orders
                         </a>
                     </li>
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/cart-checkout']">
-                            <span class="cat__menu-left__icon">CC</span>
-                            Cart / Checkout
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Invoices
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Payments
+                        </a>
+                    </li>
+                </ul>
+            </li>        
+            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a [routerLink]="['dashboards/alpha']">
+                    <span class="cat__menu-left__icon icmn-home"></span>
+                    People
+                </a>
+                <ul class="cat__menu-left__list">
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Operators
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Suppliers
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Customers
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a [routerLink]="['dashboards/alpha']">
+                    <span class="cat__menu-left__icon icmn-home"></span>
+                    Reports
+                </a>
+                <ul class="cat__menu-left__list">
+
+                </ul>
+            </li>
+            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a [routerLink]="['dashboards/alpha']">
+                    <span class="cat__menu-left__icon icmn-home"></span>
+                    Settings
+                </a>
+                <ul class="cat__menu-left__list">
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Genral
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a [routerLink]="['dashboards/alpha']">
+                    <span class="cat__menu-left__icon icmn-home"></span>
+                    Shops
+                </a>
+                <ul class="cat__menu-left__list">
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            All Shops
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Warehouses
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['ecommerce/dashboard']">
+                            <span class="cat__menu-left__icon">DB</span>
+                            Racks
                         </a>
                     </li>
                 </ul>
