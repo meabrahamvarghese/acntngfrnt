@@ -8,7 +8,7 @@ declare var Chartist: any;
   templateUrl: './dashboard.html'
 })
 
-export class EcommerceDashboard implements OnInit {
+export class Dashboard implements OnInit {
   ngOnInit() {
 
     $(function () {

@@ -13,7 +13,7 @@ import { MenuLeftComponent } from './layout/menu-left/menu-left.component';
 import { MenuRightComponent } from './layout/menu-right/menu-right.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
-import { PagesModule } from './pages/pages.module';
+import { ComponentsModule } from './components/components.module';
 
 declare var NProgress: any;
 
@@ -30,7 +30,7 @@ declare var NProgress: any;
         FormsModule,
         HttpModule,
         RouterModule,
-        PagesModule,
+        ComponentsModule,
         NgbModule.forRoot(),
         routing
     ],
