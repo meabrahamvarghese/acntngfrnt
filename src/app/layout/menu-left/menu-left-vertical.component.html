@@ -12,20 +12,20 @@
     <div class="cat__menu-left__inner">
         <ul class="cat__menu-left__list cat__menu-left__list--root">
             <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['home']">
+                <a [routerLink]="['/']">
                     <span class="cat__menu-left__icon icmn-home"></span>
                     Dashboard
                 </a>
             </li>
             <li class="cat__menu-left__divider"><!-- --></li>
             <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
+                <a href="javascript:void">
                     <span class="cat__menu-left__icon icmn-price-tag"></span>
                     Products
                 </a>
                 <ul class="cat__menu-left__list">
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
+                        <a [routerLink]="['products']">
                             <span class="cat__menu-left__icon">PL</span>
                             Product List
                         </a>
