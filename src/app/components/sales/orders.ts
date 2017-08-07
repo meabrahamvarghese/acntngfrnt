@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 declare var $: any;
 declare var jQuery: any;
 
-
 @Component({
   selector: 'cat-page',
-  templateUrl: './products-list.html'
+  templateUrl: './orders.html'
 })
 
-export class ProductsList implements OnInit {
+export class Orders implements OnInit {
   ngOnInit() {
 
     $(function () {
@@ -16,10 +15,7 @@ export class ProductsList implements OnInit {
       // Datatables
       $('#example1').DataTable({
         "lengthMenu": [[50, 100, 200, -1], [50, 100, 200, "All"]],
-        responsive:  true,
-    columnDefs: [ 
-        { responsivePriority: 1, targets: 0 },
-        { responsivePriority: 2, orderable:false, targets: -1 }],
+        responsive: true,
         "autoWidth": false
       });
 
@@ -27,4 +23,5 @@ export class ProductsList implements OnInit {
 
   }
 }
+
 
