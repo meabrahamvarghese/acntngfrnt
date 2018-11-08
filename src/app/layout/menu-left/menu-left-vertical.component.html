@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
+                        <a [routerLink]="['products/categories']">
                             <span class="cat__menu-left__icon">PC</span>
                             Product Categories
                         </a>
@@ -40,6 +40,12 @@
                         <a [routerLink]="['products/brands']">
                             <span class="cat__menu-left__icon">BR</span>
                             Brands
+                        </a>
+                    </li>
+                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a [routerLink]="['products/variations']">
+                            <span class="cat__menu-left__icon">VR</span>
+                            Variations
                         </a>
                     </li>
                 </ul>
