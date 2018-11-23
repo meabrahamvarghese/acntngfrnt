@@ -14,7 +14,7 @@ export const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [
-	Dashboard
+    Dashboard
   ]
 
 })

@@ -1,71 +1,97 @@
 import { Component, OnInit } from '@angular/core';
 declare var $: any;
 declare var jQuery: any;
+declare var autosize: any;
+declare var Ladda: any;
 declare var Chartist: any;
 
 @Component({
   selector: 'cat-page',
-  templateUrl: './dashboard.html'
+  templateUrl: './dashboard.html',
+  styleUrls: ['../../../assets/modules/dashboard/dashboard.css']
 })
 
 export class Dashboard implements OnInit {
   ngOnInit() {
 
-    $(function () {
+    $( function() {
 
-      // AREA
-      var chart1 = new Chartist.Line(".chart-area-1", {
-        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+      ///////////////////////////////////////////////////////////
+      // tooltips
+      $("[data-toggle=tooltip]").tooltip();
+
+      ///////////////////////////////////////////////////////////
+      // chart1
+      new Chartist.Line(".chart-line", {
+        labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         series: [
-          [2, 4, 7, 25, 5, 28, 31]
+          [5, 0, 7, 8, 12],
+          [2, 1, 3.5, 7, 3],
+          [1, 3, 4, 5, 6]
         ]
       }, {
         fullWidth: !0,
         chartPadding: {
-          right: 15,
-          left: -15
+          right: 40
         },
-        low: 0,
-        showArea: true,
         plugins: [
           Chartist.plugins.tooltip()
         ]
       });
 
-      var chart2 = new Chartist.Line(".chart-area-2", {
-        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-        series: [
-          [3, 10, 65, 23, 81, 17, 3]
-        ]
-      }, {
-        fullWidth: !0,
-        chartPadding: {
-          right: 15,
-          left: -15
+      ///////////////////////////////////////////////////////////
+      // chart 2
+      var overlappingData = {
+          labels: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+          series: [
+            [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+            [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+          ]
         },
-        low: 0,
-        showArea: true,
-        plugins: [
-          Chartist.plugins.tooltip()
-        ]
-      });
+        overlappingOptions = {
+          seriesBarDistance: 10,
+          plugins: [
+            Chartist.plugins.tooltip()
+          ]
+        },
+        overlappingResponsiveOptions = [
+          ["", {
+            seriesBarDistance: 5,
+            axisX: {
+              labelInterpolationFnc: function(value) {
+                return value[0]
+              }
+            }
+          }]
+        ];
 
-      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        chart1.update();
-        chart2.update();
-      });
+      new Chartist.Bar(".chart-overlapping-bar", overlappingData, overlappingOptions, overlappingResponsiveOptions);
 
-      // Datatables
-      $('#example1, #example2, #example3, #example4').DataTable({
-        responsive: true,
-        "autoWidth": false,
-        "columnDefs": [
-          { "width": "25%", "targets": 3 }
-        ]
-      });
+      ///////////////////////////////////////////////////////////
+      // custom scroll
+      if (!(/Mobi/.test(navigator.userAgent)) && jQuery().jScrollPane) {
+        $('.custom-scroll').each(function() {
+          $(this).jScrollPane({
+            contentWidth: '100%',
+            autoReinitialise: true,
+            autoReinitialiseDelay: 100
+          });
+          var api = $(this).data('jsp'),
+            throttleTimeout;
+          $(window).bind('resize', function() {
+            if (!throttleTimeout) {
+              throttleTimeout = setTimeout(function() {
+                api.reinitialise();
+                throttleTimeout = null;
+              }, 50);
+            }
+          });
+        });
+      }
 
-    })
+    } );
 
   }
 }
+
 
