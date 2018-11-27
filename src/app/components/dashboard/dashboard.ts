@@ -4,6 +4,7 @@ declare var jQuery: any;
 declare var autosize: any;
 declare var Ladda: any;
 declare var Chartist: any;
+declare var moment: any;
 
 @Component({
   selector: 'cat-page',
@@ -13,9 +14,36 @@ declare var Chartist: any;
 
 export class Dashboard implements OnInit {
   ngOnInit() {
-
+var mmt=moment();
     $( function() {
-
+    var dte=  $('#datepicker').datetimepicker({
+    date:Date(),
+        icons: {
+          time: "fa fa-clock-o",
+          date: "fa fa-calendar",
+          up: "fa fa-arrow-up",
+          down: "fa fa-arrow-down",
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right'
+        },
+        inline:false,
+        format:'M/Y',
+      });
+dte.on("dp.change", function (e) {
+      var g=moment(e.date).format("MMM YYYY")
+            $('.input-group-addon').html(g);
+        });
+      $('.input-group-addon').html(mmt.format("MMM YYYY"));  
+      $("#slt-prev-mnth").on('click', function(){
+    var selectedDate=$('#datepicker').data('date');
+    var nxtDate=moment(selectedDate,'M/Y').add(-1, 'months').format('M/Y');
+    $('#datepicker').data("DateTimePicker").date(nxtDate);
+    });
+    $("#slt-next-mnth").on('click', function(){
+    var selectedDate=$('#datepicker').data('date');
+    var nxtDate=moment(selectedDate,'M/Y').add(1, 'months').format('M/Y');
+    $('#datepicker').data("DateTimePicker").date(nxtDate);
+    });
       ///////////////////////////////////////////////////////////
       // tooltips
       $("[data-toggle=tooltip]").tooltip();

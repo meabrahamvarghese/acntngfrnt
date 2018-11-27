@@ -6,177 +6,38 @@
     </div>
     <div class="cat__menu-left__logo">
         <a [routerLink]="['/']">
-            <img src="assets/modules/dummy-assets/common/img/logo-inverse.png" />
+            
         </a>
     </div>
     <div class="cat__menu-left__inner">
         <ul class="cat__menu-left__list cat__menu-left__list--root">
-            <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['/']">
-                    <span class="cat__menu-left__icon icmn-home"></span>
-                    Dashboard
-                </a>
-            </li>
-            <li class="cat__menu-left__divider"><!-- --></li>
             <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a href="javascript:void">
+                <a [routerLink]="['/']">
                     <span class="cat__menu-left__icon icmn-price-tag"></span>
-                    Products
+                    Budget
                 </a>
                 <ul class="cat__menu-left__list">
                     <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
                         <a [routerLink]="['products']">
                             <span class="cat__menu-left__icon">PL</span>
-                            Product List
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['products/categories']">
-                            <span class="cat__menu-left__icon">PC</span>
-                            Product Categories
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['products/brands']">
-                            <span class="cat__menu-left__icon">BR</span>
-                            Brands
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['products/variations']">
-                            <span class="cat__menu-left__icon">VR</span>
-                            Variations
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-stack"></span>
-                    Stocks
-                </a>
-                <ul class="cat__menu-left__list">
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">SL</span>
-                            Stock list
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">PU</span>
-                            Purchases
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">SC</span>
-                            Stock Count
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-cart"></span>
-                    Sales
-                </a>
-                <ul class="cat__menu-left__list">
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['orders']">
-                            <span class="cat__menu-left__icon">OD</span>
-                            Orders
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">IV</span>
-                            Invoices
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">PM</span>
-                            Payments
+                            New Budget
                         </a>
                     </li>
                 </ul>
             </li>        
             <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
                 <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-users"></span>
-                    People
-                </a>
-                <ul class="cat__menu-left__list">
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">OP</span>
-                            Operators
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">SP</span>
-                            Suppliers
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">CS</span>
-                            Customers
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-stats-bars"></span>
+                    <span class="cat__menu-left__icon icmn-office"></span>
                     Reports
                 </a>
-                <ul class="cat__menu-left__list">
+            </li>
+            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a [routerLink]="['dashboards/alpha']">
+                    <span class="cat__menu-left__icon icmn-stack"></span>
+                    Accounts
+                </a>
+            </li>
 
-                </ul>
-            </li>
-            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-cog"></span>
-                    Settings
-                </a>
-                <ul class="cat__menu-left__list">
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">GN</span>
-                            Genral
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-office"></span>
-                    Shops
-                </a>
-                <ul class="cat__menu-left__list">
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">SL</span>
-                            Shop List
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">WH</span>
-                            Ware Houses
-                        </a>
-                    </li>
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['ecommerce/dashboard']">
-                            <span class="cat__menu-left__icon">RC</span>
-                            Racks
-                        </a>
-                    </li>
-                </ul>
-            </li>
         </ul>
     </div>
 </nav>
