@@ -1,18 +1,18 @@
 <!-- START: dashboard -->
-<nav class="cat__core__top-sidebar cat__core__top-sidebar--bg">
-    <div class="form-group">
-        <div id="slt-prev-mnth" class="prev-btn" style="width:auto; float: left;" ><span class="fa fa-arrow-left" title="Prev Year"></span></div> 
+<nav style="background-color: #545b62; height: 50px;" class="cat__core__top-sidebar cat__core__top-sidebar--bg">
+    <div class="form-group" style="padding:10px 40px; height:40px;">
+        <div id="slt-prev-mnth" class="prev-btn" style="width:auto; float: left;font-size: 25px; color: #efa31f;" ><i class="far fa-chevron-circle-left"></i></div> 
         <div style="width:auto; float: left;" class='input-group date' id='datepicker'>
             <input  type='hidden' class="form-control" id="inputDate" placeholder="Date" value="">
-            <span style="width: 100px; height: 20px" class="input-group-addon"></span>
+            <span style="width: 150px; height: 20px; color:white;padding-top: 15px;" class="input-group-addon"></span>
         </div>
 
-        <div id="slt-next-mnth" class="next-btn"  style="width:auto; float: left;"><span class="fa fa-arrow-right" title="Next Year"></span></div>
+        <div id="slt-next-mnth" class="next-btn"  style="width:auto; float: left;font-size: 25px;color: #efa31f;"><i class="far fa-chevron-circle-right"></i></div>
     </div>
 </nav>
 <div class="row">
     <div class="col-xl-12">
-        <div style="background-color: white; padding: 10px;border-bottom: 1px solid #e4e9f0;">
+        <div style="background-color: white; padding: 10px;border-bottom: 1px solid #e4e9f0;color: #866a3a;">
             <span><i class="far fa-plus-circle"></i></span>&nbsp;Category Group
         </div>
     </div>
@@ -20,467 +20,265 @@
         <section>
             <div style="background-color: white;height: 30px; padding: 5px;overflow:hidden">
                 <div class="row" >
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px;">
                         <div  class="ember-view ynab-checkbox">
                             <input class="form-control" type="checkbox" >
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="" >CATEGORY</div>
-                    <div class="col-xl-2 text-left" style="padding-left:3px">BUDGETED</div>
-                    <div class="col-xl-2 text-left" style="padding-left:3px">ACTIVITY</div>
-                    <div class="col-xl-2 text-left" style="padding-left:3px">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="" >CATEGORY</div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left " style="padding-left:3px">BUDGETED</div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left" style="padding-left:3px">ACTIVITY</div>
+                    <div class="col-ld-2 col-md-2 col-sm-2 col-2 text-left" style="padding-left:3px">
                         <strong>AVAILABLE</strong>
                     </div>
-                    <div class="budget-table-cell-status" style="" >&nbsp;</div>
                 </div>
             </div>
-            <div id="category_list" style="padding: 5px; height: 420px; overflow-y: scroll; overflow-x: hidden">
-                <div class="row" style="background-color: appworkspace; padding:10px 0px">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px; ">
+            <div id="category_list" style="padding: 5px; height: 440px; overflow-y: auto; overflow-x: hidden">
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
                         <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2 text-left">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
                         <bdi>$</bdi>10.00
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                         <bdi>$</bdi>0.00
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                         <bdi>$</bdi>10.00
                     </div>
                 </div>
-                <div  class="row" style="background-color: white;">
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
+                <div  class="row" style="background-color: white;border-bottom: .05em solid #f4e9d4">
+                    <div class="col-1 text-center" style="padding:0px 3px;">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 25px; ">
+                    <div class="col-5 text-left" style="padding-left: 25px; ">
                         Rent/Mortgage
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-2">
                         $10
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-2">
                         $10
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-2">
                         $10
                     </div>
                 </div>
-                <div class="row" style="background-color: appworkspace; padding:10px 0px">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px; ">
+                                <div  class="row" style="background-color: white;border-bottom: .05em solid #f4e9d4">
+                    <div class="col-1 text-center" style="padding:0px 3px;">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="">
+                    <div class="col-5 text-left" style="padding-left: 25px; ">
+                        Rent/Mortgage
+                    </div>
+                    <div class="col-2">
+                        $10
+                    </div>
+                    <div class="col-2">
+                        $10
+                    </div>
+                    <div class="col-2">
+                        $10
+                    </div>
+                </div>
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
+                        <div  title="" class="ember-view ynab-checkbox">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
                         <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2 text-left">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
                         <bdi>$</bdi>10.00
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                         <bdi>$</bdi>0.00
                     </div>
-                    <div class="col-xl-2">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
                         <bdi>$</bdi>10.00
                     </div>
                 </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
+                    </div>
+                </div>              
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
+                        <div  title="" class="ember-view ynab-checkbox">
+                            <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
                     </div>
                 </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
                     </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
                     </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
                     </div>
                 </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
                     </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
                     </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
                     </div>
                 </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
                     </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
                     </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
                     </div>
                 </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
+                    </div>
+                </div>  
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
+                        <div  title="" class="ember-view ynab-checkbox">
+                            <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
+                    </div>
+                </div>   
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
+                        <div  title="" class="ember-view ynab-checkbox">
+                            <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
                     </div>
                 </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
+                <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                         <div  title="" class="ember-view ynab-checkbox">
                             <input type="checkbox">
                         </div>
                     </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
+                        <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                     </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
+                        <bdi>$</bdi>10.00
                     </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>0.00
                     </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 10px 5px; background-color: appworkspace">  
-                    <div class="col-xl-1 text-center" style="padding:0px 3px;">
-                        <div  title="" class="ember-view ynab-checkbox">
-                            <input type="checkbox">
-                        </div>
-                    </div>
-                    <div class="col-xl-5 text-left" style="padding-left: 0px">
-                        <span style="padding-right:3px"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
-                    </div>
-                    <div class="col-xl-2">
-                        <div>
-                            <span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <div id="ember2354" title="($0.00) View this category's monthly activity. Splendid." class="ember-view budget-number user-data no-txns"><span class="user-data currency zero"><bdi>$</bdi>0.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-2">
-                        <!---->  <div id="ember2355" title="$10.00 Available to plan your spending—or click to move it to another category!" class="ember-view ynab-new-budget-available-number js-budget-available-number user-data positive"><!----><span class="user-data currency positive"><bdi>$</bdi>10.00</span>
-                        </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <bdi>$</bdi>10.00
                     </div>
                 </div>
             </div>
