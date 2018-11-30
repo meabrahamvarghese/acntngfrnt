@@ -1,10 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+import * as am4core from "@amcharts/amcharts4/core";
+import * as am4charts from "@amcharts/amcharts4/charts";
+import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+import am4themes_dataviz from "@amcharts/amcharts4/themes/dataviz";
+am4core.useTheme(am4themes_animated);
 declare var $: any;
 declare var jQuery: any;
 declare var autosize: any;
 declare var Ladda: any;
 declare var Chartist: any;
 declare var moment: any;
+declare var Chart: any;
+declare var CanvasJS: any;
+declare var c3: any;
+
 
 @Component({
   selector: 'cat-page',
@@ -13,6 +22,8 @@ declare var moment: any;
 })
 
 export class Dashboard implements OnInit {
+  private chart: am4charts.XYChart;
+constructor(private zone: NgZone) {}
   ngOnInit() {
 var mmt=moment();
     $( function() {
@@ -31,9 +42,9 @@ var mmt=moment();
       });
 dte.on("dp.change", function (e) {
       var g=moment(e.date).format("MMM YYYY")
-            $('.input-group-addon').html(g);
+            $('.budget-date-select').html(g);
         });
-      $('.input-group-addon').html(mmt.format("MMM YYYY"));  
+      $('.budget-date-select').html(mmt.format("MMM YYYY"));  
       $("#slt-prev-mnth").on('click', function(){
     var selectedDate=$('#datepicker').data('date');
     var nxtDate=moment(selectedDate,'M/Y').add(-1, 'months').format('M/Y');
@@ -66,7 +77,69 @@ dte.on("dp.change", function (e) {
           Chartist.plugins.tooltip()
         ]
       });
+      
+ $(function () {
+       var colors = {
+        one: '#283250',
+        two: '#902C2D',
+        three: '#D13F3A',
+        four: '#F05440',
+        five: '#F26958'
+      };
+      c3.generate({
+        bindto: '#chart-doughnut',
+        data: {
+          columns: [
+            ['Danger', 30],
+            ['Success', 40],
+            ['Success1', 50],
+            ['Success2', 60],
+            ['Success2', 70]
+          ],
+          type : 'donut'
+        },
+        legend: {
+  show: false
+},
+        color: {
+          pattern: [colors.one,colors.two,colors.three, colors.four, colors.five]
+        },
+        donut: {
+          title: "Connections"
+        }
+      });
 
+});
+
+
+           var chart1 = new CanvasJS.Chart("chart1-doughnut",
+    { width:336,
+    height:200,
+        exportEnabled: false,
+	animationEnabled: false,
+       // theme:'dark2',
+        backgroundColor:'#dbccb8',
+        title: {
+        fontSize: 14,
+		text: "Yearly Expense"
+	},
+      data: [
+      {
+      innerRadius: 25,
+		showInLegend: false,
+       type: "doughnut",
+       dataPoints: [
+       {  y: 53.37, indexLabel: "Android" },
+       {  y: 35.0, indexLabel: "Apple iOS" },
+       {  y: 7, indexLabel: "Blackberry" },
+       {  y: 2, indexLabel: "Windows Phone" },
+       {  y: 5, indexLabel: "Others" }
+       ]
+     }
+     ]
+   });
+
+    chart1.render();   
       ///////////////////////////////////////////////////////////
       // chart 2
       var overlappingData = {
@@ -120,6 +193,42 @@ dte.on("dp.change", function (e) {
     } );
 
   }
+  ngAfterViewInit() {
+  this.zone.runOutsideAngular(() => {
+am4core.useTheme(am4themes_dataviz);
+am4core.useTheme(am4themes_animated);
+var chart = am4core.create("qchart-doughnut", am4charts.SlicedChart);
+chart.data = [{
+  "name": "Stage #1",
+  "value": 600
+}, {
+  "name": "Stage #2",
+  "value": 300
+}, {
+  "name": "Stage #3",
+  "value": 200
+}, {
+  "name": "Stage #4",
+  "value": 180
+}, {
+  "name": "Stage #5",
+  "value": 50
+}, {
+  "name": "Stage #6",
+  "value": 20
+}, {
+  "name": "Stage #7",
+  "value": 10
+}];
+
+let series = chart.series.push(new am4charts.PyramidSeries());
+series.dataFields.value = "value";
+series.dataFields.category = "name";
+series.alignLabels = false;
+series.valueIs = "height";
+
+    });
+}
 }
 
 

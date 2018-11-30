@@ -83,7 +83,8 @@
                             "src/assets/vendors/by_bower/chart.js/dist/Chart.bundle.min.js",
                             "src/assets/vendors/by_bower/dropify/dist/js/dropify.min.js",
                             "src/assets/vendors/by_hands/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js",
-                            "src/assets/vendors/by_hands/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"
+                            "src/assets/vendors/by_hands/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js",
+                            "src/assets/vendors/by_hands/canvasjs/canvasjs.min.js"
                         ]
                     },
                     "configurations": {
@@ -169,7 +170,8 @@
                             "src/assets/vendors/by_bower/chart.js/dist/Chart.bundle.min.js",
                             "src/assets/vendors/by_bower/dropify/dist/js/dropify.min.js",
                             "src/assets/vendors/by_hands/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js",
-                            "src/assets/vendors/by_hands/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"
+                            "src/assets/vendors/by_hands/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js",
+                            "src/assets/vendors/by_hands/canvasjs/canvasjs.min.js"
                         ],
                         "styles": [
                             "src/styles.css",
