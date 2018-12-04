@@ -1,6 +1,9 @@
 <!-- START: dashboard -->
 <nav style="background-color: #545b62; height: 50px;" class="cat__core__top-sidebar cat__core__top-sidebar--bg">
-    <div class="form-group" style="padding:10px 40px; height:40px;">
+    <div style="float:left; padding: 20px 10px 5px 10px;color: #FFFFFF;">
+        <span><i class="far fa-plus-circle"></i></span>&nbsp;Category Group
+    </div>
+    <div  style="float:right; padding:10px 20px; height:40px;">
         <div id="slt-prev-mnth" class="prev-btn" style="width:auto; float: left;font-size: 25px; color: #efa31f;" ><i class="far fa-chevron-circle-left"></i></div> 
         <div style="width:auto; float: left;" class='input-group date' id='datepicker'>
             <input  type='hidden' class="form-control" id="inputDate" placeholder="Date" value="">
@@ -10,8 +13,8 @@
         <div id="slt-next-mnth" class="next-btn"  style="width:auto; float: left;font-size: 25px;color: #efa31f;"><i class="far fa-chevron-circle-right"></i></div>
     </div>
 </nav>
-<div class="row">
-    <div class="col-xl-12">
+<div class="row" >
+    <div class="col-xl-12" style="display: none">
         <div style="background-color: #f8f4ea; padding: 10px;border-bottom: 1px solid #e4e9f0;color: #866a3a;">
             <span><i class="far fa-plus-circle"></i></span>&nbsp;Category Group
         </div>
@@ -33,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div id="category_list" style="padding: 5px; height: 528px; background-color: #FFFFFF; overflow-y: auto; overflow-x: hidden">
+            <div id="category_list" style="padding: 5px; height: 470px; background-color: #FFFFFF; overflow-y: auto; overflow-x: hidden">
                 <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
                     <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                         <div  title="" class="ember-view ynab-checkbox">
@@ -400,92 +403,84 @@
     </div>
 
 
-    <div class="col-xl-5" style="padding: 2px 0px;">
+    <div class="col-xl-5" style="padding: 0px 0px;">
         <section style="margin-bottom: 2px;" class="card" order-id="card-6">
-                <div class="card-header">
+            <div style="display: none" class="card-header">
 
-                    <h5 class="mb-0 mr-3 d-inline-block text-black">
-                        <strong>Server Configuration</strong>
-                    </h5>
-                </div>
-                <div class="card-block">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="cat__core__widget cat__core__widget__3 bg-default">
-                                <div class="carousel slide" id="carousel-1" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carousel-1" data-slide-to="1" class=""></li>
-                                    </ol>
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="carousel-item active">
-                                            <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
-                                                <div class="cat__core__widget__3__icon">
-                                                    <i class="icmn-accessibility"></i>
-                                                </div>
-                                                <h2>Sales Growth</h2>
-                                                <p>View Report</p>
-                                            </a>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
-                                                <div class="cat__core__widget__3__icon">
-                                                    <i class="icmn-download"></i>
-                                                </div>
-                                                <h2>All Reports</h2>
-                                                <p>Pdf Download</p>
-                                            </a>
+                <h5 class="mb-0 mr-3 d-inline-block text-black">
+                    <strong>Server Configuration</strong>
+                </h5>
+            </div>
+            <div class="card-block" style="padding: 0 .2em;">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cat__core__widget cat__core__widget__3 bg-default">
+                            <a href="javascript: void(0);" class="cat__core__widget__3__body text-white" style="height: 140px;padding:0px; font-weight: bold; background-color: #e9f0d2; border-bottom: 1px solid rgba(22, 163, 54)">
+                                <div style=" height:66px; ">
+                                    <div  style="background-color: rgba(22, 163, 54); height: 50px; font-size: 20px; font-weight: bold; padding:5px 15px; ">
+                                        <bdi>$</bdi>9,980.00
+                                        <small><i>To be budgeted</i></small>
+                                    </div>
+                                    <div style=" height:16px; padding: 0 30% 0 0%; ">
+                                        <div style="width: 16px; height:16px; border-top: 8px solid rgba(22, 163, 54);border-right: 8px solid rgba(0, 0, 0, 0);border-bottom: 8px solid rgba(0, 0, 0, 0);border-left: 8px solid rgb(0, 0, 0, 0);">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div style="margin-top: -15px;padding: 0px 5px;color:black">
+                                    <div style="width: 20%; float:left;text-align: right; padding-right: 2px;">+$9,980.00</div><div style="width: 80%; float:left; text-align: left; padding-left: 2px; font-weight: normal;font-style: italic">Funds for Jan</div>
+                                    <div style="width: 20%; float:left;text-align: right; padding-right: 2px;">-$0.00</div><div style="width: 80%; float:left; text-align: left; padding-left: 2px;font-weight: normal;font-style: italic">Overspent in Dec</div>
+                                    <div style="width: 20%; float:left;text-align: right; padding-right: 2px;">-$0.00</div><div style="width: 80%; float:left; text-align: left; padding-left: 2px;font-weight: normal;font-style: italic">Budgeted in Jan</div>
+                                    <div style="width: 20%; float:left;text-align: right; padding-right: 2px;">-$0.00</div><div style="width: 80%; float:left; text-align: left; padding-left: 2px;font-weight: normal;font-style: italic">Budgeted in Future</div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="cat__core__widget cat__core__widget__3 bg-default">
-                                <div class="carousel slide" id="carousel-2" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carousel-2" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carousel-2" data-slide-to="1" class=""></li>
-                                    </ol>
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="carousel-item active">
-                                            <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
-                                                <div class="cat__core__widget__3__icon">
-                                                    <i class="icmn-books"></i>
-                                                </div>
-                                                <h2>
-                                                    <i class="icmn-books"></i> Todo
-                                                </h2>
-                                                <p>
-                                                    1. Upgrade
-                                                    <br />
-                                                    2. Finish
-                                                </p>
-                                            </a>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
-                                                <div class="cat__core__widget__3__icon">
-                                                    <i class="icmn-download"></i>
-                                                </div>
-                                                <h2>
-                                                    <i class="icmn-download"></i> Finish
-                                                </h2>
-                                                <p>
-                                                    1. Upgrade
-                                                    <br />
-                                                    2. Prepare
-                                                </p>
-                                            </a>
-                                        </div>
+                    </div>
+                    <div class="col-lg-6" style="display: none">
+                        <div class="cat__core__widget cat__core__widget__3 bg-default">
+                            <div class="carousel slide" id="carousel-2" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-2" data-slide-to="1" class=""></li>
+                                </ol>
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
+                                            <div class="cat__core__widget__3__icon">
+                                                <i class="icmn-books"></i>
+                                            </div>
+                                            <h2>
+                                                <i class="icmn-books"></i> Todo
+                                            </h2>
+                                            <p>
+                                                1. Upgrade
+                                                <br />
+                                                2. Finish
+                                            </p>
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
+                                            <div class="cat__core__widget__3__icon">
+                                                <i class="icmn-download"></i>
+                                            </div>
+                                            <h2>
+                                                <i class="icmn-download"></i> Finish
+                                            </h2>
+                                            <p>
+                                                1. Upgrade
+                                                <br />
+                                                2. Prepare
+                                            </p>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="cat__core__margin-fix"><!-- --></div>
                 </div>
-            </section>
+                <div class="cat__core__margin-fix"><!-- --></div>
+            </div>
+        </section>
         <section style="padding-top: 2px; margin-bottom: 0" class="card" order-id="card-10">
             <div class="card-block">
                 <div class="row">
@@ -497,8 +492,8 @@
                                     <li data-target="#carousel-12" data-slide-to="1" class=""></li>
                                 </ol>
                                 <div class="carousel-inner" role="listbox">
-                                    <div  style="height: 300px" class="carousel-item active">
-                                        <div style="padding:0;height: 300px;  text-align: left" class="cat__core__widget__3__body">
+                                    <div  style="height: 320px" class="carousel-item active">
+                                        <div style="padding:0;height: 320px;  text-align: left" class="cat__core__widget__3__body">
                                             <div style="padding:0" class="card-header">
                                                 <h5 class="mb-0 mr-3 d-inline-block text-black">
                                                     <strong>Revenue Statistics, Billions</strong>
@@ -518,89 +513,89 @@
                                             </div>
                                             <div style="width: 100%;">
                                                 <div class="chart-line height-300 chartist"></div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div style="height: 300px"  class="carousel-item">
-                                    <div id="chart-doughnut" ></div> 
-                                </div>
-                            </div>                  
+                                    <div style="height: 320px"  class="carousel-item">
+                                        <div id="chart-doughnut" ></div> 
+                                    </div>
+                                </div>                  
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
-    <div class="cat__core__margin-fix"><!-- --></div>
-</section>
+            <div class="cat__core__margin-fix"><!-- --></div>
+        </section>
 
 
-<div class="row" style="display: none">
-    <div class="col-lg-12">
-        <br/>   
-        <div class="cat__core__widget cat__core__widget__3 bg-default" style="background-color: #dbccb8 !important">
+        <div class="row" style="display: none">
+            <div class="col-lg-12">
+                <br/>   
+                <div class="cat__core__widget cat__core__widget__3 bg-default" style="background-color: #dbccb8 !important">
 
-            <div class="carousel slide" id="carousel-1" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-1" data-slide-to="1" class=""></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active" style="height: 400px;border:3px white solid;">
-                        <div id="chart-doughnut" style="width: 100%; height: 100%" ></div>   
+                    <div class="carousel slide" id="carousel-1" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-1" data-slide-to="1" class=""></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active" style="height: 400px;border:3px white solid;">
+                                <div id="chart-doughnut" style="width: 100%; height: 100%" ></div>   
+                            </div>
+                            <div class="carousel-item" style="height: 200px; border:3px white solid;">
+                                <div id="chart1-doughnut" ></div>  
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-item" style="height: 200px; border:3px white solid;">
-                        <div id="chart1-doughnut" ></div>  
+                </div>
+                <div class="cat__core__widget cat__core__widget__3 bg-default">
+                    <div class="carousel slide" id="carousel-2" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-2" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-2" data-slide-to="1" class=""></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
+                                    <div class="cat__core__widget__3__icon">
+                                        <i class="icmn-books"></i>
+                                    </div>
+                                    <h2>
+                                        <i class="icmn-books"></i> Todo
+                                    </h2>
+                                    <p>
+                                        1. Upgrade
+                                        <br />
+                                        2. Finish
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
+                                    <div class="cat__core__widget__3__icon">
+                                        <i class="icmn-download"></i>
+                                    </div>
+                                    <h2>
+                                        <i class="icmn-download"></i> Finish
+                                    </h2>
+                                    <p>
+                                        1. Upgrade
+                                        <br />
+                                        2. Prepare
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="cat__core__widget p-3">
+                    <p class="m-0">Text widget. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy.</p>
                 </div>
             </div>
         </div>
-        <div class="cat__core__widget cat__core__widget__3 bg-default">
-            <div class="carousel slide" id="carousel-2" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-2" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-2" data-slide-to="1" class=""></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
-                            <div class="cat__core__widget__3__icon">
-                                <i class="icmn-books"></i>
-                            </div>
-                            <h2>
-                                <i class="icmn-books"></i> Todo
-                            </h2>
-                            <p>
-                                1. Upgrade
-                                <br />
-                                2. Finish
-                            </p>
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="javascript: void(0);" class="cat__core__widget__3__body text-white">
-                            <div class="cat__core__widget__3__icon">
-                                <i class="icmn-download"></i>
-                            </div>
-                            <h2>
-                                <i class="icmn-download"></i> Finish
-                            </h2>
-                            <p>
-                                1. Upgrade
-                                <br />
-                                2. Prepare
-                            </p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cat__core__widget p-3">
-            <p class="m-0">Text widget. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy.</p>
-        </div>
     </div>
-</div>
-</div>
 </div>
 
 <!-- END: page scripts -->
