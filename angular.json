@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "inventory": {
+        "budgeting": {
             "root": "",
             "sourceRoot": "src",
             "projectType": "application",
@@ -110,18 +110,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "inventory:build"
+                        "browserTarget": "budgeting:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "inventory:build:production"
+                            "browserTarget": "budgeting:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "inventory:build"
+                        "browserTarget": "budgeting:build"
                     }
                 },
                 "test": {
@@ -215,7 +215,7 @@
                 }
             }
         },
-        "inventory-e2e": {
+        "budgeting-e2e": {
             "root": "e2e",
             "sourceRoot": "e2e",
             "projectType": "application",
@@ -224,7 +224,7 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "./protractor.conf.js",
-                        "devServerTarget": "inventory:serve"
+                        "devServerTarget": "budgeting:serve"
                     }
                 },
                 "lint": {
@@ -239,7 +239,7 @@
             }
         }
     },
-    "defaultProject": "inventory",
+    "defaultProject": "budgeting",
     "schematics": {
         "@schematics/angular:component": {
             "prefix": "app",
