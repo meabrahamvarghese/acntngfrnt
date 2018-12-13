@@ -59,24 +59,7 @@ export class Dashboard implements OnInit {
             // tooltips
             $("[data-toggle=tooltip]").tooltip();
 
-            ///////////////////////////////////////////////////////////
-            // chart1
-            new Chartist.Line(".chart-line", {
-                labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                series: [
-                    [5, 0, 7, 8, 12],
-                    [2, 1, 3.5, 7, 3],
-                    [1, 3, 4, 5, 6]
-                ]
-            }, {
-                    fullWidth: !0,
-                    chartPadding: {
-                        right: 40
-                    },
-                    plugins: [
-                        Chartist.plugins.tooltip()
-                    ]
-                });
+
 
             $(function () {
                 var colors = {
@@ -88,6 +71,10 @@ export class Dashboard implements OnInit {
                 };
                 c3.generate({
                     bindto: '#chart-doughnut',
+                    size:{
+                        width:$(".chart-line").parents(".tab-content").eq(0).width() - 10,
+                        height:($(".chart-line").parents(".tab-content").eq(0).height() - 10)
+                    },
                     data: {
                         columns: [
                             ['Danger', 30],
@@ -112,35 +99,7 @@ export class Dashboard implements OnInit {
             });
 
 
-            var chart1 = new CanvasJS.Chart("chart1-doughnut",
-                {
-                    width: 336,
-                    height: 200,
-                    exportEnabled: false,
-                    animationEnabled: false,
-                    // theme:'dark2',
-                    backgroundColor: '#dbccb8',
-                    title: {
-                        fontSize: 14,
-                        text: "Yearly Expense"
-                    },
-                    data: [
-                        {
-                            innerRadius: 25,
-                            showInLegend: false,
-                            type: "doughnut",
-                            dataPoints: [
-                                {y: 53.37, indexLabel: "Android"},
-                                {y: 35.0, indexLabel: "Apple iOS"},
-                                {y: 7, indexLabel: "Blackberry"},
-                                {y: 2, indexLabel: "Windows Phone"},
-                                {y: 5, indexLabel: "Others"}
-                            ]
-                        }
-                    ]
-                });
 
-            chart1.render();
             ///////////////////////////////////////////////////////////
             // chart 2
             var overlappingData = {
@@ -195,41 +154,32 @@ export class Dashboard implements OnInit {
 
     }
     ngAfterViewInit() {
-        $("#category_list").height($(window).height()-155);
-        this.zone.runOutsideAngular(() => {
-            am4core.useTheme(am4themes_dataviz);
-            am4core.useTheme(am4themes_animated);
-            var chart = am4core.create("qchart-doughnut", am4charts.SlicedChart);
-            chart.data = [{
-                "name": "Stage #1",
-                "value": 600
-            }, {
-                "name": "Stage #2",
-                "value": 300
-            }, {
-                "name": "Stage #3",
-                "value": 200
-            }, {
-                "name": "Stage #4",
-                "value": 180
-            }, {
-                "name": "Stage #5",
-                "value": 50
-            }, {
-                "name": "Stage #6",
-                "value": 20
-            }, {
-                "name": "Stage #7",
-                "value": 10
-            }];
+        $("#category_list").height(Math.max($(window).height() - 155, 520));
 
-            let series = chart.series.push(new am4charts.PyramidSeries());
-            series.dataFields.value = "value";
-            series.dataFields.category = "name";
-            series.alignLabels = false;
-            series.valueIs = "height";
+        var aspRatio = .67;
+        ///////////////////////////////////////////////////////////
+        // chart1
+        new Chartist.Line(".chart-line", {
+            labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            series: [
+                [5, 0, 7, 8, 12],
+                [2, 1, 3.5, 7, 3],
+                [1, 3, 4, 5, 6]
+            ]
+        }, {
+                width: $(".chart-line").parents(".tab-content").eq(0).width() - 10,
+                height: ($(".chart-line").parents(".tab-content").eq(0).width() - 25)*aspRatio,
+                fullWidth: true,
+                chartPadding: {
+                    top: 40,
+                    right: 40
+                },
+                plugins: [
+                    Chartist.plugins.tooltip()
+                ]
+            });
 
-        });
+
     }
 }
 
