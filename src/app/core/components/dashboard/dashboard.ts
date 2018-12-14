@@ -1,9 +1,5 @@
-import {Component, OnInit, NgZone} from '@angular/core';
-import * as am4core from "@amcharts/amcharts4/core";
-import * as am4charts from "@amcharts/amcharts4/charts";
-import am4themes_animated from "@amcharts/amcharts4/themes/animated";
-import am4themes_dataviz from "@amcharts/amcharts4/themes/dataviz";
-am4core.useTheme(am4themes_animated);
+import {Component, OnInit} from '@angular/core';
+import { BudgetService } from '../../services/budget.service';
 declare var $: any;
 declare var jQuery: any;
 declare var autosize: any;
@@ -11,19 +7,18 @@ declare var Ladda: any;
 declare var Chartist: any;
 declare var moment: any;
 declare var Chart: any;
-declare var CanvasJS: any;
 declare var c3: any;
 
 
 @Component({
     selector: 'cat-page',
     templateUrl: './dashboard.html',
-    styleUrls: ['../../../assets/modules/dashboard/dashboard.css']
+    styleUrls: ['../../../../assets/modules/dashboard/dashboard.css']
 })
 
 export class Dashboard implements OnInit {
-    private chart: am4charts.XYChart;
-    constructor(private zone: NgZone) {}
+    budgetData: Object;
+    constructor(private budget: BudgetService) {}
     ngOnInit() {
         var mmt = moment();
         $(function () {
@@ -55,13 +50,7 @@ export class Dashboard implements OnInit {
                 var nxtDate = moment(selectedDate, 'M/Y').add(1, 'months').format('M/Y');
                 $('#datepicker').data("DateTimePicker").date(nxtDate);
             });
-            ///////////////////////////////////////////////////////////
-            // tooltips
-            $("[data-toggle=tooltip]").tooltip();
 
-
-
-            $(function () {
                 var colors = {
                     one: '#283250',
                     two: '#902C2D',
@@ -96,62 +85,14 @@ export class Dashboard implements OnInit {
                     }
                 });
 
-            });
-
-
-
-            ///////////////////////////////////////////////////////////
-            // chart 2
-            var overlappingData = {
-                labels: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                series: [
-                    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-                    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-                ]
-            },
-                overlappingOptions = {
-                    seriesBarDistance: 10,
-                    plugins: [
-                        Chartist.plugins.tooltip()
-                    ]
-                },
-                overlappingResponsiveOptions = [
-                    ["", {
-                        seriesBarDistance: 5,
-                        axisX: {
-                            labelInterpolationFnc: function (value) {
-                                return value[0]
-                            }
-                        }
-                    }]
-                ];
-
-            new Chartist.Bar(".chart-overlapping-bar", overlappingData, overlappingOptions, overlappingResponsiveOptions);
-
-            ///////////////////////////////////////////////////////////
-            // custom scroll
-            if (!(/Mobi/.test(navigator.userAgent)) && jQuery().jScrollPane) {
-                $('.custom-scroll').each(function () {
-                    $(this).jScrollPane({
-                        contentWidth: '100%',
-                        autoReinitialise: true,
-                        autoReinitialiseDelay: 100
-                    });
-                    var api = $(this).data('jsp'),
-                        throttleTimeout;
-                    $(window).bind('resize', function () {
-                        if (!throttleTimeout) {
-                            throttleTimeout = setTimeout(function () {
-                                api.reinitialise();
-                                throttleTimeout = null;
-                            }, 50);
-                        }
-                    });
-                });
-            }
 
         });
-
+this.budget.getBudgetData().subscribe(data => {
+        this.budgetData = data
+        alert(JSON.stringify(this.budgetData))
+        console.log(this.budgetData);
+      }
+    );
     }
     ngAfterViewInit() {
         $("#category_list").height(Math.max($(window).height() - 155, 520));
@@ -182,5 +123,3 @@ export class Dashboard implements OnInit {
 
     }
 }
-
-

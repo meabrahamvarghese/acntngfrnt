@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Router, NavigationStart, NavigationEnd, RouterModule } from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -13,7 +14,7 @@ import { MenuLeftComponent } from './layout/menu-left/menu-left.component';
 import { MenuRightComponent } from './layout/menu-right/menu-right.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
-import { ComponentsModule } from './components/components.module';
+import { ComponentsModule } from './core/components/components.module';
 
 declare var NProgress: any;
 
@@ -29,6 +30,7 @@ declare var NProgress: any;
         BrowserModule,
         FormsModule,
         HttpModule,
+        HttpClientModule,
         RouterModule,
         ComponentsModule,
         NgbModule.forRoot(),
