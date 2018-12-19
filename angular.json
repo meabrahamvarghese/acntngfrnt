@@ -34,7 +34,6 @@
                             "src/assets/vendors/by_bower/nprogress/nprogress.css",
                             "src/assets/vendors/by_hands/font-linearicons/style.css",
                             "src/assets/vendors/by_hands/font-icomoon/style.css",
-                            "src/assets/vendors/by_hands/font-awesome/css/font-awesome.min.css",
                             "src/assets/vendors/by_hands/font-awesome/css/all.css",
                             "src/assets/modules/core/common/core.cleanui.css",
                             "src/assets/modules/vendors/common/vendors.cleanui.css",
@@ -71,7 +70,6 @@
                             "src/assets/vendors/by_hands/datatables/media/js/dataTables.bootstrap4.min.js",
                             "src/assets/vendors/by_bower/datatables-fixedcolumns/js/dataTables.fixedColumns.js",
                             "src/assets/vendors/by_bower/datatables-responsive/js/dataTables.responsive.js",
-                            "src/assets/vendors/by_hands/editable-table/mindmup-editabletable.js",
                             "src/assets/vendors/by_bower/d3/d3.min.js",
                             "src/assets/vendors/by_bower/c3/c3.min.js",
                             "src/assets/vendors/by_bower/chartist/dist/chartist.min.js",
@@ -83,8 +81,7 @@
                             "src/assets/vendors/by_bower/chart.js/dist/Chart.bundle.min.js",
                             "src/assets/vendors/by_bower/dropify/dist/js/dropify.min.js",
                             "src/assets/vendors/by_hands/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js",
-                            "src/assets/vendors/by_hands/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js",
-                            "src/assets/vendors/by_hands/canvasjs/canvasjs.min.js"
+                            "src/assets/vendors/by_hands/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"
                         ]
                     },
                     "configurations": {
@@ -158,7 +155,6 @@
                             "src/assets/vendors/by_hands/datatables/media/js/dataTables.bootstrap4.min.js",
                             "src/assets/vendors/by_bower/datatables-fixedcolumns/js/dataTables.fixedColumns.js",
                             "src/assets/vendors/by_bower/datatables-responsive/js/dataTables.responsive.js",
-                            "src/assets/vendors/by_hands/editable-table/mindmup-editabletable.js",
                             "src/assets/vendors/by_bower/d3/d3.min.js",
                             "src/assets/vendors/by_bower/c3/c3.min.js",
                             "src/assets/vendors/by_bower/chartist/dist/chartist.min.js",
@@ -170,8 +166,7 @@
                             "src/assets/vendors/by_bower/chart.js/dist/Chart.bundle.min.js",
                             "src/assets/vendors/by_bower/dropify/dist/js/dropify.min.js",
                             "src/assets/vendors/by_hands/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js",
-                            "src/assets/vendors/by_hands/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js",
-                            "src/assets/vendors/by_hands/canvasjs/canvasjs.min.js"
+                            "src/assets/vendors/by_hands/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"
                         ],
                         "styles": [
                             "src/styles.css",
@@ -187,7 +182,6 @@
                             "src/assets/vendors/by_bower/nprogress/nprogress.css",
                             "src/assets/vendors/by_hands/font-linearicons/style.css",
                             "src/assets/vendors/by_hands/font-icomoon/style.css",
-                            "src/assets/vendors/by_hands/font-awesome/css/font-awesome.min.css",
                             "src/assets/vendors/by_hands/font-awesome/css/all.css",
                             "src/assets/modules/core/common/core.cleanui.css",
                             "src/assets/modules/vendors/common/vendors.cleanui.css",

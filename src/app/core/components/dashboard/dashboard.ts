@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { BudgetService } from '../../services/budget.service';
+import {BudgetService} from '../../services/budget.service';
 declare var $: any;
 declare var jQuery: any;
 declare var autosize: any;
@@ -51,48 +51,47 @@ export class Dashboard implements OnInit {
                 $('#datepicker').data("DateTimePicker").date(nxtDate);
             });
 
-                var colors = {
-                    one: '#283250',
-                    two: '#902C2D',
-                    three: '#D13F3A',
-                    four: '#F05440',
-                    five: '#F26958'
-                };
-                c3.generate({
-                    bindto: '#chart-doughnut',
-                    size:{
-                        width:$(".chart-line").parents(".tab-content").eq(0).width() - 10,
-                        height:($(".chart-line").parents(".tab-content").eq(0).height() - 10)
-                    },
-                    data: {
-                        columns: [
-                            ['Danger', 30],
-                            ['Success', 40],
-                            ['Success1', 50],
-                            ['Success2', 60],
-                            ['Success2', 70]
-                        ],
-                        type: 'donut'
-                    },
-                    legend: {
-                        show: false
-                    },
-                    color: {
-                        pattern: [colors.one, colors.two, colors.three, colors.four, colors.five]
-                    },
-                    donut: {
-                        title: "Connections"
-                    }
-                });
+            var colors = {
+                one: '#283250',
+                two: '#902C2D',
+                three: '#D13F3A',
+                four: '#F05440',
+                five: '#F26958'
+            };
+            c3.generate({
+                bindto: '#chart-doughnut',
+                size: {
+                    width: $(".chart-line").parents(".tab-content").eq(0).width() - 10,
+                    height: ($(".chart-line").parents(".tab-content").eq(0).height() - 10)
+                },
+                data: {
+                    columns: [
+                        ['Danger', 30],
+                        ['Success', 40],
+                        ['Success1', 50],
+                        ['Success2', 60],
+                        ['Success2', 70]
+                    ],
+                    type: 'donut'
+                },
+                legend: {
+                    show: false
+                },
+                color: {
+                    pattern: [colors.one, colors.two, colors.three, colors.four, colors.five]
+                },
+                donut: {
+                    title: "Connections"
+                }
+            });
 
 
         });
-this.budget.getBudgetData().subscribe(data => {
-        this.budgetData = data
-        alert(JSON.stringify(this.budgetData))
-        console.log(this.budgetData);
-      }
-    );
+        this.budget.getBudgetData().subscribe(data => {
+            this.budgetData = data['data']
+            
+        }
+        );
     }
     ngAfterViewInit() {
         $("#category_list").height(Math.max($(window).height() - 155, 520));
@@ -109,7 +108,7 @@ this.budget.getBudgetData().subscribe(data => {
             ]
         }, {
                 width: $(".chart-line").parents(".tab-content").eq(0).width() - 10,
-                height: ($(".chart-line").parents(".tab-content").eq(0).width() - 25)*aspRatio,
+                height: ($(".chart-line").parents(".tab-content").eq(0).width() - 25) * aspRatio,
                 fullWidth: true,
                 chartPadding: {
                     top: 40,

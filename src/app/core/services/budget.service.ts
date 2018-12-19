@@ -8,6 +8,6 @@ export class BudgetService {
 
   constructor(private http: HttpClient) { }
   getBudgetData() {
-    return this.http.get('https://reqres.in/api/users')
+    return this.http.get('https://reqres.in/api/users');
   }
 }
