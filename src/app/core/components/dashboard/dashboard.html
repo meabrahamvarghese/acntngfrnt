@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div id="category_list" style="padding: 5px; height: 470px; background-color: #f8f4ea; overflow-y: auto; overflow-x: hidden">
-                <div *ngFor="let bj of budgetData" >
+                <div class="budgetcat" *ngFor="let bj of budgetData" >
                     <div class="row" style="background-color: #ddb67c; padding:10px 0px;border-bottom: .05em solid #f4e9d4">  
                         <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center" style="padding:0px 3px; ">
                             <div  title="" class="ember-view ynab-checkbox">
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="col-lg-5 col-md-5 col-sm-5 col-5 text-left" style="font-weight: bold;">
-                            <span style="min-width:12px; margin-right:3px;"><i class="fa fa-caret-right fa-lg"></i></span>Immediate Obligations<span style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
+                            <span class="budgetcatetoggle clickable" style="display: block;min-width:13px;float:left;margin-right:3px;"><i class=" fa fa-caret-right fa-lg"></i></span><span class="clickable">Immediate Obligations</span><span class="addsubcatbtn clickable" style="padding-left:3px"><i class="far fa-plus-circle"></i></span>
                         </div>
                         <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-left">
                             <bdi>$</bdi>10.00
@@ -57,26 +57,7 @@
                             <bdi>$</bdi>10.00
                         </div>
                     </div>
-                    <div  class="row" style="background-color: white;border-bottom: .05em solid #f4e9d4">
-                        <div class="col-1 text-center" style="padding:0px 3px;">
-                            <div  title="" class="ember-view ynab-checkbox">
-                                <input type="checkbox">
-                            </div>
-                        </div>
-                        <div class="col-5 text-left" style="padding-left: 25px; ">
-                            Rent/Mortgage
-                        </div>
-                        <div class="col-2">
-                            $10
-                        </div>
-                        <div class="col-2">
-                            $10
-                        </div>
-                        <div class="col-2">
-                            $10
-                        </div>
-                    </div>
-                    <div  class="row" style="background-color: white;border-bottom: .05em solid #f4e9d4">
+                    <div *ngFor="let categ of bj.sub" class="budgetsubcat row" style="background-color: white;border-bottom: .05em solid #f4e9d4" >
                         <div class="col-1 text-center" style="padding:0px 3px;">
                             <div  title="" class="ember-view ynab-checkbox">
                                 <input type="checkbox">

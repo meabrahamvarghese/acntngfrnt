@@ -36,7 +36,12 @@ a {
 }
 
 .growthtab{}
-
+#category_list .budgetcat:not(.isactive) .budgetsubcat{ display:none; }
+.addsubcatbtn{visibility: hidden}
+#category_list .budgetcat:hover .addsubcatbtn{
+    visibility: visible
+}
+.clickable{ cursor: pointer }
 @media (min-width: 1200px) {
     .growthtab{
         position: absolute

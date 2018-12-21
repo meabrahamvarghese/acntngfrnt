@@ -11,19 +11,13 @@
     </div>
     <div class="cat__menu-left__inner">
         <ul class="cat__menu-left__list cat__menu-left__list--root">
-            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['/']">
-                    <span class="cat__menu-left__icon icmn-price-tag"></span>
+            <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a style="padding-right: 0" [routerLink]="['/']">
+                    <span class="cat__menu-left__icon fa fa-calculator"></span>
                     Budget
+                    <span style="margin-left: 70px" class="font-size-12"><button style="outline: none; background: transparent; color:lightgray; border-radius:5px; padding: 3px; border .5em white"><span style="color: lightgrey">New&nbsp;</span><strong><i class="font-size-15 far fa-plus-circle"></i></strong></button> </span>
                 </a>
-                <ul class="cat__menu-left__list">
-                    <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
-                        <a [routerLink]="['products']">
-                            <span class="cat__menu-left__icon">PL</span>
-                            New Budget
-                        </a>
-                    </li>
-                </ul>
+               
             </li>        
             <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
                 <a [routerLink]="['dashboards/alpha']">

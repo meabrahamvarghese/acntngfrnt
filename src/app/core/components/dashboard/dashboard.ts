@@ -50,7 +50,16 @@ export class Dashboard implements OnInit {
                 var nxtDate = moment(selectedDate, 'M/Y').add(1, 'months').format('M/Y');
                 $('#datepicker').data("DateTimePicker").date(nxtDate);
             });
+            $(".budgetcatetoggle").click(function () {
+                if ($(this).parents(".budgetcat:eq(0)").hasClass('isactive')) {
+                    $(this).parents(".budgetcat:eq(0)").removeClass('isactive');
+                    $(this).find('i').removeClass("fa-caret-down").addClass("fa-caret-right");
+                }else{
+                   $(this).parents(".budgetcat:eq(0)").addClass('isactive');  
+                   $(this).find('i').removeClass("fa-caret-right").addClass("fa-caret-down");
+                }
 
+            });
             var colors = {
                 one: '#283250',
                 two: '#902C2D',
@@ -89,7 +98,7 @@ export class Dashboard implements OnInit {
         });
         this.budget.getBudgetData().subscribe(data => {
             this.budgetData = data['data']
-            
+
         }
         );
     }
