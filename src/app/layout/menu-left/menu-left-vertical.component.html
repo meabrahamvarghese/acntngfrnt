@@ -25,11 +25,30 @@
                     Reports
                 </a>
             </li>
-            <li class="cat__menu-left__item cat__menu-left__submenu" [routerLinkActive]="['cat__menu-left__item--active']">
-                <a [routerLink]="['dashboards/alpha']">
-                    <span class="cat__menu-left__icon icmn-stack"></span>
-                    Accounts
+            <li class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                <a style="padding-right:0px; background-color: #070327" [routerLink]="['dashboards/alpha']">
+                   <span style="min-width: 35px; float:right;" class="">AC</span>
+                   <span style="padding-right: 15px;float:right; color:#dee4c0; font-size: 14px; font-weight: bold;" class="">+450000000</span>
+
+                    <strong> Accounts</strong>
                 </a>
+                <ul class="cat__menu-left__list">
+                    <li  class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a style="min-height:25px; padding:5px 50px 5px 20px;" [routerLink]="['transactions']">
+                           <span style="float:right; color:#d3f13d; font-size: 11px; font-weight: bold;" class="">+50000000</span>
+                            <i style="padding: 5px;" class="fa fa-edit"></i>
+                            <small>Federal bank abcdefghijkl</small>
+                        </a>
+                    </li>
+                    <li  class="cat__menu-left__item" [routerLinkActive]="['cat__menu-left__item--active']">
+                        <a style="min-height:25px; padding:5px 50px 5px 20px;" [routerLink]="['transactions']">
+                           <span style="float:right; color:#ff9696;font-size: 11px; font-weight: bold;" class="">-50000000000</span>
+                            <i style="padding: 5px;" class="fa fa-edit"></i>
+                            <small>HDFC</small>
+                        </a>
+                    </li>
+                </ul>
+                <button style="padding:0px 7px; margin:25px 25px; color:white; border-radius: 10px; background: transparent">Add Account</button>
             </li>
 
         </ul>

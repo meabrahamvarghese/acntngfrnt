@@ -20,6 +20,7 @@ export class Dashboard implements OnInit {
     budgetData: Object;
     constructor(private budget: BudgetService) {}
     ngOnInit() {
+  
         var mmt = moment();
         $(function () {
             var dte = $('#datepicker').datetimepicker({
@@ -50,7 +51,7 @@ export class Dashboard implements OnInit {
                 var nxtDate = moment(selectedDate, 'M/Y').add(1, 'months').format('M/Y');
                 $('#datepicker').data("DateTimePicker").date(nxtDate);
             });
-            $(".budgetcatetoggle").click(function () {
+            $(document).on('click',".budgetcatetoggle",function () {
                 if ($(this).parents(".budgetcat:eq(0)").hasClass('isactive')) {
                     $(this).parents(".budgetcat:eq(0)").removeClass('isactive');
                     $(this).find('i').removeClass("fa-caret-down").addClass("fa-caret-right");
@@ -101,8 +102,10 @@ export class Dashboard implements OnInit {
 
         }
         );
+        
     }
     ngAfterViewInit() {
+
         $("#category_list").height(Math.max($(window).height() - 155, 520));
 
         var aspRatio = .67;
