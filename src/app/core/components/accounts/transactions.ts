@@ -9,6 +9,9 @@ declare var jQuery: any;
 })
 
 export class Transactions implements OnInit {
+    arrayOne(n: number): any[] {
+        return Array(n);
+    }
     ngOnInit() {
         $(function () {
 
