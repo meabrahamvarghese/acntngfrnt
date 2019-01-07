@@ -58,7 +58,7 @@ a {
   float: left;
   border-bottom-width: 0;
 }
-
+.popover{border:0px !important;}
 .clickable{ cursor: pointer }
 @media (min-width: 1200px) {
     .growthtab{

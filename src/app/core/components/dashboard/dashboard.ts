@@ -20,9 +20,16 @@ export class Dashboard implements OnInit {
     budgetData: Object;
     constructor(private budget: BudgetService) {}
     ngOnInit() {
-  
+
         var mmt = moment();
         $(function () {
+            $("#add_category").popover({
+                html: true,
+                content: function () {
+                    return '<div class="popover" role="tooltip"><div class="popover-arrow"></div><div style="min-width:200px" class="popover-content"><div class="form-group"><input placeholder="New Category Group" type="text" class="form-control"></div><div align="right" style="height:30px;  "><button type="button" class="btn btn-outline-secondary btn-sm">Cancel</button>&nbsp;<button class="btn btn-primary btn-sm">OK</button></div></div></div>';
+                }
+            });
+
             var dte = $('#datepicker').datetimepicker({
                 date: Date(),
                 icons: {
@@ -51,13 +58,13 @@ export class Dashboard implements OnInit {
                 var nxtDate = moment(selectedDate, 'M/Y').add(1, 'months').format('M/Y');
                 $('#datepicker').data("DateTimePicker").date(nxtDate);
             });
-            $(document).on('click',".budgetcatetoggle",function () {
+            $(document).on('click', ".budgetcatetoggle", function () {
                 if ($(this).parents(".budgetcat:eq(0)").hasClass('isactive')) {
                     $(this).parents(".budgetcat:eq(0)").removeClass('isactive');
                     $(this).find('i').removeClass("fa-caret-down").addClass("fa-caret-right");
-                }else{
-                   $(this).parents(".budgetcat:eq(0)").addClass('isactive');  
-                   $(this).find('i').removeClass("fa-caret-right").addClass("fa-caret-down");
+                } else {
+                    $(this).parents(".budgetcat:eq(0)").addClass('isactive');
+                    $(this).find('i').removeClass("fa-caret-right").addClass("fa-caret-down");
                 }
 
             });
@@ -102,7 +109,7 @@ export class Dashboard implements OnInit {
 
         }
         );
-        
+
     }
     ngAfterViewInit() {
 
