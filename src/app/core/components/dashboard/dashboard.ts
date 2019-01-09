@@ -19,17 +19,26 @@ declare var c3: any;
 export class Dashboard implements OnInit {
     budgetData: Object;
     constructor(private budget: BudgetService) {}
+    canceladdCategory(): void {
+  alert("1")
+}
     ngOnInit() {
 
         var mmt = moment();
         $(function () {
             $("#add_category").popover({
+                container:'cat-page',
                 html: true,
                 content: function () {
-                    return '<div class="popover" role="tooltip"><div class="popover-arrow"></div><div style="min-width:200px" class="popover-content"><div class="form-group"><input placeholder="New Category Group" type="text" class="form-control"></div><div align="right" style="height:30px;  "><button type="button" class="btn btn-outline-secondary btn-sm">Cancel</button>&nbsp;<button class="btn btn-primary btn-sm">OK</button></div></div></div>';
+                    return '<div class="popover" role="tooltip"><div class="popover-arrow"></div><div style="min-width:200px" class="popover-content"><div class="form-group"><input placeholder="New Category Group" type="text" class="form-control"></div><div align="right" style="height:30px;  "><button (click)="pop.hide()" type="button" class="btn btn-outline-secondary btn-sm">Cancel</button>&nbsp;<button class="btn btn-primary btn-sm">OK</button></div></div></div>';
                 }
             });
-
+            
+function canceladdCategory(){
+    
+    
+    alert("")
+}
             var dte = $('#datepicker').datetimepicker({
                 date: Date(),
                 icons: {
@@ -140,4 +149,5 @@ export class Dashboard implements OnInit {
 
 
     }
+    
 }
